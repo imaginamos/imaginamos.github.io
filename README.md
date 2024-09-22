@@ -52,6 +52,6 @@ La estructura de la documentación se ha diseñado para que cualquier desarrolla
 
 1. **Clona este repositorio**:
    ```bash
-   git clone https://github.com/tuusuario/documentacion-imaginamos.git
+   git clone git@github.com:imaginamos/imaginamos.github.io.git
 
 o si lo prefieres, puedes ver la documentación directamente desde la página oficial <a href="https://imaginamos.github.io/">Imaginamos Docs</a>
