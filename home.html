@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="assets/images/favicon/favicon-16x16.png" rel="icon" />
+  <title>Imaginamos | Tech Docs</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet ============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper =============================== -->
+  <div id="main-wrapper">
+
+    <!-- Header ============================ -->
+    <header id="header" class="sticky-top">
+      <!-- Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+        <div class="container-fluid">
+          <!-- Sidebar Toggler -->
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button">
+            <span></span>
+            <span class="w-75"></span>
+            <span class="w-50"></span>
+          </button>
+
+          <!-- Logo -->
+          <a class="logo ml-md-3" href="index.html" title="Imaginamos Tech Docs">
+            <img src="assets/images/favicon/favicon-32x32.png" alt="Imaginamos Tech Docs" />
+          </a>
+          <span class="text-2 ml-2">v1.0</span>
+          <!-- Logo End -->
+
+          <!-- Navbar Toggler -->
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#">Github</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Solicitud Nuevo Repo</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="#">AWS</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Solicitud Nuevo Ambiente</a></li>
+                  <li><a class="dropdown-item" href="#">Solicitud Nuevo S3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+            <li class="social-icons-twitter">
+              <a data-toggle="tooltip" href="https://twitter.com/ImaginamosCo" target="_blank" title="X"
+                data-original-title="X">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="social-icons-facebook">
+              <a data-toggle="tooltip" href="https://www.facebook.com/ImaginamosCo/?locale=es_LA" target="_blank"
+                title="Facebook" data-original-title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="social-icons-instagram">
+              <a data-toggle="tooltip" href="https://www.instagram.com/imaginamosco/?hl=es" target="_blank"
+                title="Instagram" data-original-title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li class="social-icons-linkedin">
+              <a data-toggle="tooltip" href="https://www.linkedin.com/company/imaginamos/mycompany/" target="_blank"
+                title="Linkedin" data-original-title="Linkedin">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content ============================ -->
+    <div id="content" role="main">
+
+      <!-- Sidebar Navigation ============================ -->
+      <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column ">
+          <li class="nav-item"><a class="nav-link active" href="#idocs_start">Primeros Pasos</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_github">Git & Github</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_sonarqube">Sonarqube</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#idocs_developer_guide">Guía del Desarrollador</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_dg_sonarqube">SonarQube</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Docs Content ============================ -->
+      <div class="idocs-content">
+        <div class="container">
+
+          <!-- Getting Started ============================ -->
+          <section id="idocs_start">
+            <h1>Documentación</h1>
+            <h2>Procesos de Calidad en el desarrollo de Software</h2>
+            <p class="lead">Esta documentación es una base para poder implementar un código de calidad y aumentar la
+              productividad de los entregables hacia el cliente, de una manera rápida y sistemática.</p>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><strong>Versión:</strong> 1.0</li>
+                  <li>
+                    <strong>Autor:</strong> Alvaro Rincones, Líder Técnico
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><strong class="font-weight-700">Creado:</strong> 22 Septiembre, 2024</li>
+                  <li><strong>Actualizado:</strong> 22 Septiembre, 2024</li>
+                </ul>
+              </div>
+            </div>
+            <p class="alert alert-info">Cualquier inquetud que tengas puedes comunicarte a través de los medios que
+              dispone Imaginamos para la comunicación interna de los desarrolladores.</p>
+          </section>
+
+          <hr class="divider">
+
+          <section id="idocs_github">
+            <div class="container">
+              <h2>Guía de Instalación y Configuración de Git y GitHub Desktop</h2>
+
+              <p>Esta documentación te guiará paso a paso para instalar Git, se recomendará la instalación de GitHub
+                Desktop y te mostrará cómo configurar tu cuenta de GitHub utilizando SSH para una mayor seguridad. Sigue
+                estos pasos cuidadosamente para asegurar una configuración correcta y eficiente.</p>
+
+              <h2>Índice</h2>
+              <ul>
+                <li><a href="#1">Crear una Cuenta en GitHub</a></li>
+                <li><a href="#2">Instalar Git</a></li>
+                <li><a href="#3">Instalar GitHub Desktop</a></li>
+                <li><a href="#4">Configurar SSH en GitHub</a></li>
+                <ul>
+                  <li><a href="#4.1">Generar Claves SSH</a></li>
+                  <li><a href="#4.2">Agregar la Clave SSH a tu Cuenta de GitHub</a></li>
+                </ul>
+                <li><a href="#5">Verificación de la Configuración</a></li>
+              </ul>
+
+              <h2 id="1">1. Crear una Cuenta en GitHub</h2>
+              <p>Antes de comenzar con la instalación de herramientas, es necesario crear una cuenta en GitHub
+                utilizando tu correo corporativo proporcionado por <strong>Imaginamos</strong>.</p>
+              <h3>Pasos para Crear una Cuenta en GitHub</h3>
+              <ul>
+                <li><strong>Accede a GitHub:</strong> Abre tu navegador web y dirígete a <a href="https://github.com"
+                    target="_blank">https://github.com</a>.</li>
+                <li><strong>Registro de Nueva Cuenta:</strong> Haz clic en el botón <strong>"Sign up"</strong> ubicado
+                  en la esquina superior derecha.</li>
+                <li><strong>Completa la Información:</strong> Ingresa tu correo corporativo, crea una contraseña y
+                  selecciona un nombre de usuario único.</li>
+                <li><strong>Finalizar Registro:</strong> Verifica tu correo electrónico si es necesario.</li>
+              </ul>
+
+              <h2 id="2">2. Instalar Git</h2>
+              <p>Git es un sistema de control de versiones esencial para el manejo de tus proyectos. A continuación, se
+                explica cómo instalarlo en diferentes sistemas operativos.</p>
+
+              <h3>Instalación en Windows</h3>
+              <ul>
+                <li><strong>Descargar Git:</strong> Ve a <a href="https://git-scm.com/download/win"
+                    target="_blank">https://git-scm.com/download/win</a> y descarga el instalador.</li>
+                <li><strong>Ejecutar el Instalador:</strong> Abre el archivo descargado y sigue las instrucciones del
+                  asistente de instalación.</li>
+                <li><strong>Verificar la Instalación:</strong> Abre <strong>Símbolo del sistema</strong> o
+                  <strong>PowerShell</strong> y ejecuta el siguiente comando:<br>
+                  <pre><code>git --version</code></pre>
+                </li>
+              </ul>
+
+              <h3>Instalación en macOS</h3>
+              <ul>
+                <li><strong>Usar Homebrew:</strong> Abre la terminal y ejecuta:
+                  <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+                  Luego instala Git con:
+                  <pre><code>brew install git</code></pre>
+                </li>
+                <li><strong>Verificar la Instalación:</strong> En la terminal, ejecuta:
+                  <pre><code>git --version</code></pre>
+                </li>
+              </ul>
+
+              <h3>Instalación en Linux</h3>
+              <ul>
+                <li><strong>Distribuciones Basadas en Debian/Ubuntu:</strong> Abre la terminal y ejecuta:
+                  <pre><code>sudo apt update && sudo apt install git</code></pre>
+                </li>
+                <li><strong>Verificar la Instalación:</strong> En la terminal, ejecuta:
+                  <pre><code>git --version</code></pre>
+                </li>
+              </ul>
+
+              <h2 id="3">3. Instalar GitHub Desktop</h2>
+              <ul>
+                <li><strong>Descargar GitHub Desktop:</strong> Ve a <a href="https://desktop.github.com"
+                    target="_blank">https://desktop.github.com</a> y descarga el instalador.</li>
+                <li><strong>Ejecutar el Instalador:</strong> Abre el archivo descargado y sigue las instrucciones del
+                  asistente de instalación.</li>
+                <li><strong>Iniciar Sesión:</strong> Inicia sesión con las credenciales de tu cuenta de GitHub creada
+                  previamente.</li>
+              </ul>
+
+              <h2 id="4">4. Configurar SSH en GitHub</h2>
+              <h3 id="4.1">4.1 Generar Claves SSH</h3>
+
+              <h4>En Windows (Usando Git Bash)</h4>
+              <ul>
+                <li><strong>Abrir Git Bash:</strong> Busca "Git Bash" en el menú de inicio y ábrelo.</li>
+                <li><strong>Generar la Clave SSH:</strong> Ejecuta el siguiente comando:
+                  <pre><code>ssh-keygen -t ed25519 -C "tu_email@imaginamos.com"</code></pre>
+                </li>
+              </ul>
+
+              <h4>En macOS y Linux</h4>
+              <ul>
+                <li><strong>Abrir la Terminal:</strong> Abre la terminal en tu sistema operativo.</li>
+                <li><strong>Generar la Clave SSH:</strong> Ejecuta el siguiente comando:
+                  <pre><code>ssh-keygen -t ed25519 -C "tu_email@imaginamos.com"</code></pre>
+                </li>
+              </ul>
+
+              <h3 id="4.2">4.2 Agregar la Clave SSH a tu Cuenta de GitHub</h3>
+              <ul>
+                <li><strong>Copiar la Clave Pública:</strong> Ejecuta el siguiente comando en tu terminal para copiar la
+                  clave pública al portapapeles:
+                  <pre><code>clip < ~/.ssh/id_ed25519.pub</code></pre>
+                </li>
+                <li><strong>Agregar la Clave en GitHub:</strong> Accede a GitHub, ve a "Settings" > "SSH and GPG keys",
+                  y haz clic en "New SSH key".</li>
+              </ul>
+
+              <h2 id="5">5. Verificación de la Configuración</h2>
+              <p>Para verificar que la configuración de SSH fue exitosa, abre la terminal y ejecuta:</p>
+              <pre><code>ssh -T git@github.com</code></pre>
+              <p>Deberías recibir un mensaje confirmando que la autenticación fue exitosa.</p>
+
+              <p><em>Para cualquier duda o asistencia adicional, contacta al equipo de soporte técnico de
+                  Imaginamos.</em></p>
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <section id="idocs_sonarqube">
+            <h2>Configuración de SonarQube en Local con Docker</h2>
+
+            <h2>1. Instalación y Configuración de SonarQube en Docker</h2>
+
+            <h3>Paso 1: Preparar el ambiente local</h3>
+            <p><strong>Requisitos:</strong></p>
+            <ul>
+              <li>Tener Docker y Docker Compose instalados.</li>
+              <li>4 GB de RAM asignados a Docker.</li>
+            </ul>
+
+            <h3>Paso 2: Crear un archivo <code>docker-compose.yml</code></h3>
+            <p>Crea un archivo llamado <code>docker-compose.yml</code> en el directorio raíz del proyecto y añade el
+              siguiente contenido:</p>
+
+            <pre><code>version: "3"
+services:
+  sonarqube:
+    image: sonarqube:lts-enterprise
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_JDBC_URL=jdbc:postgresql://db:5432/sonarqube
+      - SONAR_JDBC_USERNAME=sonar
+      - SONAR_JDBC_PASSWORD=sonar
+    networks:
+      - sonarnet
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_logs:/opt/sonarqube/logs
+      - sonarqube_extensions:/opt/sonarqube/extensions
+
+  db:
+    image: postgres:13
+    container_name: sonarqube_db
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+      - POSTGRES_DB=sonarqube
+    networks:
+      - sonarnet
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+
+networks:
+  sonarnet:
+    driver: bridge
+
+volumes:
+  postgresql_data:
+  sonarqube_data:
+  sonarqube_logs:
+  sonarqube_extensions:
+</code></pre>
+
+            <h3>Paso 3: Ejecutar SonarQube con Docker Compose</h3>
+            <p>Ejecuta el siguiente comando en la terminal dentro del directorio donde está ubicado el archivo
+              <code>docker-compose.yml</code>:
+            </p>
+            <pre><code>docker-compose up -d</code></pre>
+            <p>Accede a SonarQube desde tu navegador en <a href="http://localhost:9000"
+                target="_blank">http://localhost:9000</a>.</p>
+
+            <h3>Paso 4: Configurar SonarQube</h3>
+            <ul>
+              <li>Inicia sesión con las credenciales predeterminadas: <strong>admin/admin</strong>.</li>
+              <li>Cambia la contraseña después de iniciar sesión.</li>
+            </ul>
+
+            <h3>Paso 5: Agregar un Proyecto a SonarQube</h3>
+            <ol>
+              <li>Selecciona <strong>Create new project</strong>.</li>
+              <li>Genera un token para el proyecto.</li>
+              <li>Sigue las instrucciones para agregar el análisis de código a tu proyecto (por ejemplo, con Maven o
+                Gradle).</li>
+            </ol>
+
+            <h3>Paso 6: Ejecutar el análisis de SonarQube en el proyecto</h3>
+            <p>Añade el archivo <code>sonar-project.properties</code> al directorio raíz del proyecto con el siguiente
+              contenido:</p>
+            <pre><code>sonar.projectKey=nombre-del-proyecto
+sonar.host.url=http://localhost:9000
+sonar.login=token-generado
+</code></pre>
+            <p>Luego, ejecuta el siguiente comando:</p>
+            <pre><code>sonar-scanner</code></pre>
+
+            <h2>2. Configuración de Quality Gates (QG)</h2>
+
+            <h3>Paso 1: Acceder a Quality Gates</h3>
+            <p>Desde la interfaz de SonarQube, selecciona <strong>Quality Gates</strong> en el menú principal.</p>
+
+            <h3>Paso 2: Crear un nuevo Quality Gate</h3>
+            <p>Haz clic en <strong>Create</strong> para crear un nuevo Quality Gate y define las reglas necesarias, como
+              la cobertura mínima de código.</p>
+
+            <h3>Paso 3: Asignar el Quality Gate al proyecto</h3>
+            <p>Ve a <strong>Administration &gt; Projects</strong>, selecciona tu proyecto y asigna el nuevo Quality
+              Gate.</p>
+
+            <h2>3. Automatización del Proceso</h2>
+
+            <p>Considera integrar SonarQube en tus pipelines de CI/CD (como Jenkins, GitLab CI, GitHub Actions) para
+              automatizar el análisis de código en cada commit o pull request.</p>
+
+            <h2>4. Solución de Problemas Comunes</h2>
+
+            <p>Asegúrate de verificar los registros de SonarQube si hay problemas de conexión o rendimiento. Algunos
+              errores comunes incluyen:</p>
+            <ul>
+              <li>Problemas de memoria asignada a Docker.</li>
+              <li>Fallos de conexión con la base de datos PostgreSQL.</li>
+              <li>Errores de autenticación al usar tokens incorrectos.</li>
+            </ul>
+          </section>
+
+          <hr class="divider">
+
+          <section id="idocs_developer_guide">
+            <h2>Guía del Desarrollador</h2>
+            <p class="lead mb-5">Es una guía general sobre las buenas prácticas que se deben seguir en el desarrollo de
+              funcionalidades. También encontrarás toda la documentación técnica y los flujos de trabajo recomendados
+              por Imaginamos.</p>
+          </section>
+
+
+          <section id="idocs_dg_sonarqube">
+            <h2>Proceso para la Implementación de Features/Fixes y Validación de Calidad de Código con SonarQube</h2>
+            <center>
+              <img src="assets/developer-guides/sonarqube-flow.jpg" />
+            </center>
+
+            <ol>
+              <li>
+                <strong>Clonación del Repositorio</strong><br>
+                El desarrollador debe clonar el repositorio remoto al entorno local para contar con una copia
+                actualizada del código fuente en su máquina. Esto garantiza que el trabajo se realiza con la versión más
+                reciente del proyecto.
+              </li>
+              <li>
+                <strong>Creación de una Nueva Rama (feature o fix)</strong><br>
+                Partiendo de la rama de desarrollo (por ejemplo, <code>develop</code>), se crea una nueva rama que sigue
+                el esquema de nombres establecido, utilizando prefijos como <code>feature/</code> o <code>fix/</code>,
+                dependiendo de si se trata de una nueva funcionalidad o de la corrección de un error. Esto permite
+                aislar los cambios específicos del desarrollo en curso.
+              </li>
+              <li>
+                <strong>Desarrollo de la Feature/Fix y Commits</strong><br>
+                En esta fase, se implementan los cambios necesarios para completar la <em>feature</em> o corregir el
+                <em>fix</em>. Cada avance significativo en el desarrollo se guarda mediante un commit. Es importante que
+                los mensajes de commit sigan el estándar de <strong>conventional commits</strong> definido por la
+                empresa, asegurando claridad y consistencia en el historial de cambios.
+              </li>
+              <li>
+                <strong>Ejecución del Escáner de SonarQube</strong><br>
+                Una vez que se han realizado los cambios en el código, se ejecuta el escáner de SonarQube para validar
+                que el código cumple con los <strong>Quality Gates</strong> establecidos. Este análisis detecta posibles
+                errores, vulnerabilidades y asegura el cumplimiento de estándares de calidad y seguridad.
+              </li>
+              <li>
+                <strong>Validación de los Quality Gates en SonarQube</strong><br>
+                En este paso, se revisa si el código ha cumplido con los Quality Gates mínimos definidos. Dependiendo
+                del resultado, hay dos escenarios posibles:
+                <ul>
+                  <li>
+                    <strong>No cumple con los Quality Gates</strong><br>
+                    Si el código no cumple con los mínimos establecidos (por ejemplo, por la presencia de errores o baja
+                    cobertura de pruebas), el desarrollador debe realizar correcciones y agregar nuevos commits que
+                    solventen los problemas identificados. Después, se vuelve a ejecutar el escáner de SonarQube.
+                  </li>
+                  <li>
+                    <strong>Cumple con los Quality Gates</strong><br>
+                    Si el código pasa los Quality Gates, el desarrollador puede proceder a subir los cambios al
+                    repositorio remoto, subiendo la rama que contiene la <em>feature</em> o <em>fix</em> implementada.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Generación de la Pull Request (PR)</strong><br>
+                Con la rama ya subida al repositorio remoto, se genera una Pull Request (PR) que apunta a la rama de
+                desarrollo principal (generalmente <code>develop</code> o <code>master</code>). Este PR solicita la
+                revisión de los cambios antes de ser integrados en la rama principal.
+                <ul>
+                  <li>
+                    <strong>Subida de Evidencias</strong><br>
+                    Se adjunta una captura de pantalla o un reporte del análisis de SonarQube que muestra los resultados
+                    del escaneo, asegurando que los Quality Gates se han cumplido correctamente.
+                  </li>
+                  <li>
+                    <strong>Revisión por Parte del Equipo</strong><br>
+                    El líder de equipo o un compañero desarrollador revisa la PR, verificando tanto la funcionalidad
+                    como la calidad del código, en base a las políticas del equipo.
+                  </li>
+                  <li>
+                    <strong>Corregir según Sugerencias</strong><br>
+                    Si durante la revisión se encuentran aspectos por mejorar, el desarrollador debe corregir los
+                    cambios según las sugerencias, hacer los ajustes necesarios, y repetir el proceso desde el paso 3.
+                  </li>
+                  <li>
+                    <strong>Fusión del PR</strong><br>
+                    Si la PR no tiene comentarios o sugerencias pendientes, se procede a fusionar la rama de la
+                    <em>feature</em> o <em>fix</em> en la rama de desarrollo principal, completando el ciclo de
+                    implementación.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <hr class="divider">
+        </div>
+      </div>
+    <!-- Content end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
