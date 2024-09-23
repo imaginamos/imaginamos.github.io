@@ -129,6 +129,7 @@
           <li class="nav-item"><a class="nav-link" href="#idocs_developer_guide">Guía del Desarrollador</a>
             <ul class="nav flex-column">
               <li class="nav-item"><a class="nav-link" href="#idocs_dg_sonarqube">SonarQube</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_dg_conventional_commits">Conventional Commits</a></li>
             </ul>
           </li>
         </ul>
@@ -503,29 +504,116 @@ sonar.login=token-generado
           </section>
 
           <hr class="divider">
+
+          <section id="idocs_dg_conventional_commits">
+            <h2>Convención de Conventional Commits</h2>
+
+            <p>La convención de <strong>Conventional Commits</strong> utilizada en Angular sigue una estructura
+              específica que ayuda a estandarizar los mensajes de commit, facilitando el entendimiento y la revisión de
+              cambios. A continuación se detalla el formato y algunos ejemplos:</p>
+
+            <h2>Formato General:</h2>
+            <pre><code>
+    &lt;tipo&gt;(&lt;alcance opcional&gt;): &lt;descripción corta&gt;
+
+    &lt;cuerpo opcional&gt;
+
+    &lt;footer opcional&gt;
+    </code></pre>
+
+            <h2>Descripción de cada parte:</h2>
+            <ul>
+              <li><strong>Tipo</strong>: Describe la naturaleza del cambio. Algunos tipos comunes incluyen:
+                <ul>
+                  <li><code>feat</code>: Para una nueva funcionalidad.</li>
+                  <li><code>fix</code>: Para corregir un bug.</li>
+                  <li><code>docs</code>: Para cambios en la documentación.</li>
+                  <li><code>style</code>: Para cambios de estilo (formato, indentación) que no afectan la lógica del
+                    código.</li>
+                  <li><code>refactor</code>: Para refactorización de código sin agregar o corregir funcionalidad.</li>
+                  <li><code>test</code>: Para agregar o modificar pruebas.</li>
+                  <li><code>chore</code>: Para cambios que no afectan el código de producción, como actualizaciones de
+                    dependencias.</li>
+                </ul>
+              </li>
+              <li><strong>Alcance (opcional)</strong>: El área o módulo afectado por el cambio, colocado entre
+                paréntesis después del tipo de commit.</li>
+              <li><strong>Descripción corta</strong>: Una breve descripción del cambio que no debe exceder los 72
+                caracteres.</li>
+              <li><strong>Cuerpo opcional</strong>: Descripción más detallada que proporciona contexto o explicaciones
+                adicionales.</li>
+              <li><strong>Footer opcional</strong>: Para incluir notas adicionales, como referencias a issues (por
+                ejemplo, <code>Closes #123</code>) o indicar breaking changes.</li>
+            </ul>
+
+            <h2>Ejemplos de Conventional Commits:</h2>
+
+            <h3>Agregar una nueva funcionalidad:</h3>
+            <pre><code>
+    feat(users): agregar soporte para autenticación por OAuth
+    </code></pre>
+
+            <h3>Corregir un bug:</h3>
+            <pre><code>
+    fix(login): corregir el error al validar credenciales vacías
+    </code></pre>
+
+            <h3>Actualizar la documentación:</h3>
+            <pre><code>
+    docs(readme): agregar instrucciones de configuración inicial
+    </code></pre>
+
+            <h3>Cambios de estilo:</h3>
+            <pre><code>
+    style(header): corregir la indentación y eliminar espacios en blanco
+    </code></pre>
+
+            <h3>Refactorización de código:</h3>
+            <pre><code>
+    refactor(api): optimizar el manejo de errores en las peticiones
+    </code></pre>
+
+            <h3>Cambiar el proceso de construcción o actualizar dependencias:</h3>
+            <pre><code>
+    chore(deps): actualizar la versión de TypeScript a 4.3.5
+    </code></pre>
+
+            <h2>Notas importantes:</h2>
+            <p>La estructura de Conventional Commits ayuda a automatizar procesos como:</p>
+            <ul>
+              <li>Generar changelogs automáticamente.</li>
+              <li>Gestionar el versionado semántico.</li>
+              <li>Facilitar la revisión y entendimiento de los cambios realizados.</li>
+            </ul>
+
+            <p>Puedes consultar la <a href="https://www.conventionalcommits.org/en/v1.0.0/"
+                target="_blank">documentación oficial</a> para obtener más detalles.</p>
+          </section>
+
+          <hr class="divider">
         </div>
       </div>
-    <!-- Content end -->
+      <!-- Content end -->
 
-  </div>
-  <!-- Document Wrapper end -->
+    </div>
+    <!-- Document Wrapper end -->
 
-  <!-- Back To Top -->
-  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
-      class="fa fa-chevron-up"></i></a>
+    <!-- Back To Top -->
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+        class="fa fa-chevron-up"></i></a>
 
-  <!-- JavaScript
+    <!-- JavaScript
 ============================ -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Highlight JS -->
-  <script src="assets/vendor/highlight.js/highlight.min.js"></script>
-  <!-- Easing -->
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <!-- Magnific Popup -->
-  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-  <!-- Custom Script -->
-  <script src="assets/js/theme.js"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Highlight JS -->
+    <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+    <!-- Easing -->
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Custom Script -->
+    <script src="assets/js/theme.js"></script>
 </body>
 
 </html>
