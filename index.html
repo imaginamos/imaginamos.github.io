@@ -128,8 +128,10 @@
           </li>
           <li class="nav-item"><a class="nav-link" href="#idocs_developer_guide">Guía del Desarrollador</a>
             <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_dg_conventional_commits">Conventional Commits</a>
+              <li class="nav-item"><a class="nav-link" href="#idocs_dg_gitflow">Git Flow</a></li>
               <li class="nav-item"><a class="nav-link" href="#idocs_dg_sonarqube">SonarQube</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_dg_conventional_commits">Conventional Commits</a></li>
+              </li>
             </ul>
           </li>
         </ul>
@@ -419,92 +421,6 @@ sonar.login=token-generado
               por Imaginamos.</p>
           </section>
 
-
-          <section id="idocs_dg_sonarqube">
-            <h2>Proceso para la Implementación de Features/Fixes y Validación de Calidad de Código con SonarQube</h2>
-            <center>
-              <img src="assets/developer-guides/sonarqube-flow.jpg" />
-            </center>
-
-            <ol>
-              <li>
-                <strong>Clonación del Repositorio</strong><br>
-                El desarrollador debe clonar el repositorio remoto al entorno local para contar con una copia
-                actualizada del código fuente en su máquina. Esto garantiza que el trabajo se realiza con la versión más
-                reciente del proyecto.
-              </li>
-              <li>
-                <strong>Creación de una Nueva Rama (feature o fix)</strong><br>
-                Partiendo de la rama de desarrollo (por ejemplo, <code>develop</code>), se crea una nueva rama que sigue
-                el esquema de nombres establecido, utilizando prefijos como <code>feature/</code> o <code>fix/</code>,
-                dependiendo de si se trata de una nueva funcionalidad o de la corrección de un error. Esto permite
-                aislar los cambios específicos del desarrollo en curso.
-              </li>
-              <li>
-                <strong>Desarrollo de la Feature/Fix y Commits</strong><br>
-                En esta fase, se implementan los cambios necesarios para completar la <em>feature</em> o corregir el
-                <em>fix</em>. Cada avance significativo en el desarrollo se guarda mediante un commit. Es importante que
-                los mensajes de commit sigan el estándar de <strong>conventional commits</strong> definido por la
-                empresa, asegurando claridad y consistencia en el historial de cambios.
-              </li>
-              <li>
-                <strong>Ejecución del Escáner de SonarQube</strong><br>
-                Una vez que se han realizado los cambios en el código, se ejecuta el escáner de SonarQube para validar
-                que el código cumple con los <strong>Quality Gates</strong> establecidos. Este análisis detecta posibles
-                errores, vulnerabilidades y asegura el cumplimiento de estándares de calidad y seguridad.
-              </li>
-              <li>
-                <strong>Validación de los Quality Gates en SonarQube</strong><br>
-                En este paso, se revisa si el código ha cumplido con los Quality Gates mínimos definidos. Dependiendo
-                del resultado, hay dos escenarios posibles:
-                <ul>
-                  <li>
-                    <strong>No cumple con los Quality Gates</strong><br>
-                    Si el código no cumple con los mínimos establecidos (por ejemplo, por la presencia de errores o baja
-                    cobertura de pruebas), el desarrollador debe realizar correcciones y agregar nuevos commits que
-                    solventen los problemas identificados. Después, se vuelve a ejecutar el escáner de SonarQube.
-                  </li>
-                  <li>
-                    <strong>Cumple con los Quality Gates</strong><br>
-                    Si el código pasa los Quality Gates, el desarrollador puede proceder a subir los cambios al
-                    repositorio remoto, subiendo la rama que contiene la <em>feature</em> o <em>fix</em> implementada.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Generación de la Pull Request (PR)</strong><br>
-                Con la rama ya subida al repositorio remoto, se genera una Pull Request (PR) que apunta a la rama de
-                desarrollo principal (generalmente <code>develop</code> o <code>master</code>). Este PR solicita la
-                revisión de los cambios antes de ser integrados en la rama principal.
-                <ul>
-                  <li>
-                    <strong>Subida de Evidencias</strong><br>
-                    Se adjunta una captura de pantalla o un reporte del análisis de SonarQube que muestra los resultados
-                    del escaneo, asegurando que los Quality Gates se han cumplido correctamente.
-                  </li>
-                  <li>
-                    <strong>Revisión por Parte del Equipo</strong><br>
-                    El líder de equipo o un compañero desarrollador revisa la PR, verificando tanto la funcionalidad
-                    como la calidad del código, en base a las políticas del equipo.
-                  </li>
-                  <li>
-                    <strong>Corregir según Sugerencias</strong><br>
-                    Si durante la revisión se encuentran aspectos por mejorar, el desarrollador debe corregir los
-                    cambios según las sugerencias, hacer los ajustes necesarios, y repetir el proceso desde el paso 3.
-                  </li>
-                  <li>
-                    <strong>Fusión del PR</strong><br>
-                    Si la PR no tiene comentarios o sugerencias pendientes, se procede a fusionar la rama de la
-                    <em>feature</em> o <em>fix</em> en la rama de desarrollo principal, completando el ciclo de
-                    implementación.
-                  </li>
-                </ul>
-              </li>
-            </ol>
-          </section>
-
-          <hr class="divider">
-
           <section id="idocs_dg_conventional_commits">
             <h2>Convención de Conventional Commits</h2>
 
@@ -588,6 +504,143 @@ sonar.login=token-generado
 
             <p>Puedes consultar la <a href="https://www.conventionalcommits.org/en/v1.0.0/"
                 target="_blank">documentación oficial</a> para obtener más detalles.</p>
+          </section>
+
+          <hr class="divider">
+
+          <section id="idocs_dg_gitflow">
+            <h2>Introducción a Git Flow</h2>
+            <center>
+              <img src="assets/developer-guides/gitflow.jpg" />
+            </center>
+
+            <p>
+              Git Flow es una estrategia de branching (manejo de ramas) para Git que facilita la organización del ciclo
+              de vida del desarrollo de software. Fue introducida por Vincent Driessen y se ha convertido en una
+              metodología popular para gestionar el desarrollo colaborativo en equipos, permitiendo mantener la
+              estabilidad del código en producción mientras se trabaja en nuevas características o correcciones.
+            </p>
+            <p>
+              El flujo Git Flow define una estructura clara de ramas con roles específicos para cada una de ellas:
+            </p>
+            <ul>
+              <li><strong>main</strong>: Es la rama principal, siempre lista para ser desplegada en producción. Solo
+                contiene versiones estables del software.</li>
+              <li><strong>develop</strong>: Esta rama actúa como el punto de integración donde los desarrolladores
+                combinan su trabajo. El código aquí está en constante evolución, pero debe estar lo suficientemente
+                estable como para futuras versiones.</li>
+              <li><strong>feature branches</strong>: Son ramas temporales utilizadas para desarrollar nuevas
+                características o mejoras. Una vez completada la tarea, se fusionan en la rama develop.</li>
+              <li><strong>release branches</strong>: Se crean a partir de develop cuando una nueva versión está lista
+                para ser lanzada. Aquí se hacen pruebas y ajustes finales antes de fusionarse tanto en <code>main</code>
+                como en <code>develop</code>.</li>
+              <li><strong>hotfix branches</strong>: Se utilizan para arreglar errores críticos en producción. Se crean a
+                partir de <code>main</code> y, una vez que el problema se soluciona, la corrección se fusiona en
+                <code>main</code> y <code>develop</code>.</li>
+            </ul>
+            <h3>Beneficios de Git Flow</h3>
+            <ul>
+              <li><strong>Organización clara</strong>: Diferentes ramas para diferentes propósitos permiten mantener el
+                código más organizado.</li>
+              <li><strong>Control de versiones</strong>: Facilita la gestión de múltiples versiones del software en
+                paralelo.</li>
+              <li><strong>Flujo controlado</strong>: Permite la integración continua y las pruebas antes de desplegar en
+                producción, reduciendo riesgos.</li>
+            </ul>
+            <p>
+              Este flujo es ideal para proyectos donde se necesita mantener versiones de producción estables, mientras
+              se desarrollan nuevas funcionalidades de forma simultánea.
+            </p>
+
+            <h3>Git Flow en Imaginamos</h3>
+            <center>
+              <img src="assets/developer-guides/gitflow-imaginamos.webp" />
+            </center>
+          </section>
+
+          <hr class="divider">
+
+          <section id="idocs_dg_sonarqube">
+            <h2>Proceso para la Implementación de Features/Fixes y Validación de Calidad de Código con SonarQube</h2>
+            <center>
+              <img src="assets/developer-guides/sonarqube-flow.jpg" />
+            </center>
+
+            <ol>
+              <li>
+                <strong>Clonación del Repositorio</strong><br>
+                El desarrollador debe clonar el repositorio remoto al entorno local para contar con una copia
+                actualizada del código fuente en su máquina. Esto garantiza que el trabajo se realiza con la versión más
+                reciente del proyecto.
+              </li>
+              <li>
+                <strong>Creación de una Nueva Rama (feature o fix)</strong><br>
+                Partiendo de la rama de desarrollo (por ejemplo, <code>develop</code>), se crea una nueva rama que sigue
+                el esquema de nombres establecido, utilizando prefijos como <code>feature/</code> o <code>fix/</code>,
+                dependiendo de si se trata de una nueva funcionalidad o de la corrección de un error. Esto permite
+                aislar los cambios específicos del desarrollo en curso.
+              </li>
+              <li>
+                <strong>Desarrollo de la Feature/Fix y Commits</strong><br>
+                En esta fase, se implementan los cambios necesarios para completar la <em>feature</em> o corregir el
+                <em>fix</em>. Cada avance significativo en el desarrollo se guarda mediante un commit. Es importante que
+                los mensajes de commit sigan el estándar de <strong>conventional commits</strong> definido por la
+                empresa, asegurando claridad y consistencia en el historial de cambios.
+              </li>
+              <li>
+                <strong>Ejecución del Escáner de SonarQube</strong><br>
+                Una vez que se han realizado los cambios en el código, se ejecuta el escáner de SonarQube para validar
+                que el código cumple con los <strong>Quality Gates</strong> establecidos. Este análisis detecta posibles
+                errores, vulnerabilidades y asegura el cumplimiento de estándares de calidad y seguridad.
+              </li>
+              <li>
+                <strong>Validación de los Quality Gates en SonarQube</strong><br>
+                En este paso, se revisa si el código ha cumplido con los Quality Gates mínimos definidos. Dependiendo
+                del resultado, hay dos escenarios posibles:
+                <ul>
+                  <li>
+                    <strong>No cumple con los Quality Gates</strong><br>
+                    Si el código no cumple con los mínimos establecidos (por ejemplo, por la presencia de errores o baja
+                    cobertura de pruebas), el desarrollador debe realizar correcciones y agregar nuevos commits que
+                    solventen los problemas identificados. Después, se vuelve a ejecutar el escáner de SonarQube.
+                  </li>
+                  <li>
+                    <strong>Cumple con los Quality Gates</strong><br>
+                    Si el código pasa los Quality Gates, el desarrollador puede proceder a subir los cambios al
+                    repositorio remoto, subiendo la rama que contiene la <em>feature</em> o <em>fix</em> implementada.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Generación de la Pull Request (PR)</strong><br>
+                Con la rama ya subida al repositorio remoto, se genera una Pull Request (PR) que apunta a la rama de
+                desarrollo principal (generalmente <code>develop</code> o <code>master</code>). Este PR solicita la
+                revisión de los cambios antes de ser integrados en la rama principal.
+                <ul>
+                  <li>
+                    <strong>Subida de Evidencias</strong><br>
+                    Se adjunta una captura de pantalla o un reporte del análisis de SonarQube que muestra los resultados
+                    del escaneo, asegurando que los Quality Gates se han cumplido correctamente.
+                  </li>
+                  <li>
+                    <strong>Revisión por Parte del Equipo</strong><br>
+                    El líder de equipo o un compañero desarrollador revisa la PR, verificando tanto la funcionalidad
+                    como la calidad del código, en base a las políticas del equipo.
+                  </li>
+                  <li>
+                    <strong>Corregir según Sugerencias</strong><br>
+                    Si durante la revisión se encuentran aspectos por mejorar, el desarrollador debe corregir los
+                    cambios según las sugerencias, hacer los ajustes necesarios, y repetir el proceso desde el paso 3.
+                  </li>
+                  <li>
+                    <strong>Fusión del PR</strong><br>
+                    Si la PR no tiene comentarios o sugerencias pendientes, se procede a fusionar la rama de la
+                    <em>feature</em> o <em>fix</em> en la rama de desarrollo principal, completando el ciclo de
+                    implementación.
+                  </li>
+                </ul>
+              </li>
+            </ol>
           </section>
 
           <hr class="divider">
